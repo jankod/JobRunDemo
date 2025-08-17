@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Start jobs</title>
 </head>
 <body>
-$END$
+
+<h2>Job Management</h2>
+
+<form action="/jobs/start" method="post">
+    <label>
+        Poruka:
+        <input type="text" name="message" value="poruka neka">
+    </label>
+    <button type="submit">Start Simple Job</button>
+</form>
+
+<br><br>
+
+<form action="/jobs/start-with-param" method="post">
+    <label for="message">Message:</label>
+    <input type="text" id="message" name="message" placeholder="Enter message for job">
+    <button type="submit">Start Job with Parameter</button>
+</form>
+
+<br><br>
+
+<form action="/jobs/start-complex" method="post">
+    <label for="complexMessage">Message:</label>
+    <input type="text" id="complexMessage" name="message" placeholder="Enter message">
+    <br><br>
+    <label for="count">Count:</label>
+    <input type="number" id="count" name="count" value="3" min="1" max="10">
+    <br><br>
+    <button type="submit">Start Complex Job</button>
+</form>
+
 </body>
 </html>
